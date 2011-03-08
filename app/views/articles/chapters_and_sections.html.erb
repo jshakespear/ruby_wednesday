@@ -1,0 +1,6 @@
+<% title 'Chapters and Sections' %>
+<h3>Chapters and Sections</h3>
+
+<% for category in @categories %>
+  <%= render :partial => 'chapter', :locals => {:chapter => category} %>
+<% end %>

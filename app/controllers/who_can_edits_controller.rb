@@ -1,0 +1,2 @@
+class WhoCanEditsController < ApplicationController
+end

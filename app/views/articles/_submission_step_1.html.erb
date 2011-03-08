@@ -1,0 +1,56 @@
+<% javascript 'dynamic_categories' %>
+<h3>Submission Wizard :: Step 1</h3>
+
+<table>
+  <tr>
+    <td><%= f.label 'Article Title' %>:</td>
+    <td><%= f.text_field :title, :size => 120 %></td>
+  </tr>
+  <tr>
+    <td><%= f.label 'One line Description' %>:</td>
+    <td><%= f.text_field :description, :size => 120 %></td>
+  </tr>
+  <tr>
+    <td><%= f.label 'Current Owner' %>:</td>
+    <td><%= f.label current_user.first_name %> <%= f.label current_user.last_name %><%#= f.text_field :user.name, :size => 120 %></td>
+  </tr>
+<!--
+  <tr>
+    <td><%= f.label 'Co-Authors (optional)' %>:</td>
+    <td><%#= f.text_field :coauthors, :size => 120 %></td>
+  </tr>
+  <tr>
+    <td><%= f.label 'Tags' %>:</td>
+    <td>
+      <%#= f.text_field :tags, :size => 120 %> Please select all that apply
+    </td>
+  </tr>
+-->
+  <tr>
+    <td><%= f.label 'Location' %>:</td>
+    <td>
+      <table>
+        <tr>
+          <td>Section</td>
+          <td><%= f.collection_select :category_id, Category.find(:all, :conditions => 'parent_id IS NULL'), :id, :name, :prompt => 'Select One' %></td>
+        </tr>
+        <tr>
+          <td>Subsection</td>
+          <td><%= f.collection_select :sub_category_id, Category.find(:all, :conditions => 'parent_id IS NOT NULL'), :id, :name, :prompt => 'Select One' %>      </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td><%= f.label 'License' %>:</td>
+    <td><%= f.collection_select :license_id, License.find(:all, :order => :name), :id, :name, :prompt => 'Select One' %> License descriptions can be found <a href="/licenses" target="_blank">here</a></td>
+  </tr>
+  <tr>
+    <td><%= f.label 'Who can Edit?' %>:</td>
+    <td><%= f.collection_select :who_can_edit_id, WhoCanEdit.find(:all, :order => :order_index), :id, :name, :prompt => 'Select One' %></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><%= f.check_box 'agree' %>I have read and agreed to the <a href='' target="_blank">contributor's agreement</a></td>
+  </tr>
+</table>

@@ -1,0 +1,25 @@
+var sub_categories = new Array();
+<% for category in @categories %>
+  sub_categories.push(new Array(<%= category.parent_id %>, '<%=h category.name %>', <%= category.id %>));
+<% end %>
+
+function categorySelected() {
+  category_id = $('article_category_id').getValue();
+  options = $('article_sub_category_id').options;
+  options.length = 1;
+  sub_categories.each(function(sub_category) {
+    if (sub_category[0] == category_id) {
+      options[options.length] = new Option(sub_category[1], sub_category[2]);
+    }
+  });
+  if (options.length == 1) {
+    $('article_sub_category_id').disable();
+  } else {
+    $('article_sub_category_id').enable();
+  }
+}
+
+document.observe('dom:loaded', function() {
+  $('article_sub_category_id').disable();
+  $('article_category_id').observe('change', categorySelected);
+});

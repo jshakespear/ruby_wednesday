@@ -1,0 +1,12 @@
+<div class="div_chapter">
+  <div class="chapter_line" style="text-align:left;">
+    <%= link_to chapter['name'], category_articles_path(chapter), :style => 'text-decoration:none;' %>
+  </div><div class="chapter_line" style="float:right;">
+    <strong>Total:</strong> <%= get_articles_by_category_id(chapter['id']).count %> article(s)
+  </div>
+</div>
+<ul>
+<% for sub_category in get_sub_categories_by_parent_id(chapter.id) %>
+  <%= render :partial => 'section', :locals => {:section => sub_category} %>
+<% end %>
+</ul>

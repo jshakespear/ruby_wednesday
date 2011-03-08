@@ -1,0 +1,23 @@
+<h3>Welcome to Ruby Wednesday</h3>
+
+<div id="div_latest_surveys">
+  <div class="feature_title">Latest Surveys - please vote!</div>
+  <div class="feature_content">
+    <%= render :partial => "latest_surveys", :collection => @surveys %>
+  </div>
+</div>
+<div class="feature_break">&nbsp;</div>
+<div id="div_featured_article">
+  <div class="feature_title">Featured Article</div>
+  <div class="feature_content">
+    <%= render :partial => "featured_article" %>
+  </div>
+</div>
+<div class="feature_break">&nbsp;</div>
+<div id="div_latest_best_picks">
+  <div class="feature_title">Latest Best Picks</div>
+  <div class="feature_content">
+    <%= render :partial => "latest_best_picks", :collection => @latest_best_picks %>
+  </div>
+</div>
+<div class="feature_break">&nbsp;</div>

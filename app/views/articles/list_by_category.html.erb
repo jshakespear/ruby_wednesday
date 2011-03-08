@@ -1,0 +1,31 @@
+<% if @parent_category %>
+  <h3>Articles for <%= @parent_category.name %> >> <%= @category.name %></h3>
+<% else %>
+  <h3>Articles for <%= @category.name %></h3>
+<% end %>
+<% if @articles %>
+  <ol>
+	<% @articles.each do |article| %>
+		<li style="padding-bottom:15px;">
+	    <table>
+	      <tr>
+	        <td>
+	          <a href="/articles/show/<%= article.id %>"><%= article.title %></a>
+	        </td>
+	        <td><%#= article.user.name %></td>
+	        <td style="font-size:11px;"><%= article.updated_at %>
+	      </tr>
+	      <tr>
+	        <td style="font-size:11px;"><%#= article.license.name %></td>
+	        <td></td>
+	        <td style="font-size:11px;">Rating x/5 (x votes)</td>
+	      </tr>
+	      <tr>
+	        <td colspan="3" style="font-size:11px;"><%= article.description %></td>
+	    </table>
+	  </li>
+	<% end %>
+	</ol>
+<% else %>
+	No articles found
+<% end%>

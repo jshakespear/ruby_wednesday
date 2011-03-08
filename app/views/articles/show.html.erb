@@ -1,0 +1,72 @@
+<% if @article %>
+  <table width="100%">
+    <tr>
+      <td>
+        <h2 style="padding:0;"><%= @article.title %></h2>
+        <p>By <%= @article.user.first_name %> <%= @article.user.last_name %> | <%= @article.updated_at.to_s(:friendly_date) %> <% if @owner == true %><%= link_to 'edit', :action => 'edit', :id => @article.id %><% end %></p>
+      </td>
+      <td style="float:right;">
+        <table>
+          <tr>
+            <td align="right">License:</td>
+            <td><%= @article.license.name %></td>
+          </tr>
+          <tr>
+            <td align="right">First Posted:</td>
+            <td><%= @article.created_at.to_s(:friendly_date) %></td>
+          </tr>
+          <tr>
+            <td align="right">Views:</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="right">Bookmarked:</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="right">Tags:</td>
+            <td></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      	<%#= @article.resources %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      	<%= coderay(@article.content) %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      	<h3>References</h3>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      	<h3>Revision History</h3>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      	<h3>License</h3>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      	<%= @article.license.name %>
+      	<p><%#= @article.license.full_description %></p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      	<h3>About the Author</h3>
+      </td>
+    </tr>
+  </table>
+<% else %>
+	Article not found
+<% end%>

@@ -1,0 +1,9 @@
+<li><a href="#"><%= left_nav_category.name %></a>
+	<% if !@sub_categories.nil? %>
+	<ul>
+		<% for sub_category in get_sub_categories_by_parent_id(left_nav_category.id) %>
+			<%= render :partial => "shared/left_nav_sub_category", :locals => { :sub_category => sub_category } %>
+		<% end %>
+	</ul>
+	<% end %>
+</li>

@@ -1,0 +1,167 @@
+<% title 'Submission Guidelines' %>
+<h3>Submission Guidelines</h3>
+<h4>Quick Links</h4>
+<ul>
+  <li><%= link_to 'Article Submission Wizard', :controller => :articles, :action => :new %></li>
+  <li><%= link_to 'Article FAQ', :action => :faq %></li>
+</ul>
+<h4>Do you have some epic code or a cool trick you want to share?</h4>
+<p>Sharing tips with others is a great way to not only help others, but also to
+  become a better ruby programmer. You'll get a lot of positive feedback, suggestions
+  for improvement, bug fixes, free testing, and more often than not, suggestions
+  on how to make the code itself even better. It also encourages others to share
+  their code and ideas, which in turn gives you access to a larger base of free
+  source code.</p>
+<h4>How it works</h4>
+<p>You can submit either a full article with downloads and images, or just a quick
+  Tip n' Trick. Tips n tricks are meant to be very, very short tips, snippets or
+  even just a one-liner you came across that saved your day. Articles are for presenting
+  more detailed ideas.</p>
+<ol>
+  <li>There are two ways to submit an article: via email to article@rubywednesday.com
+    or via the Article Submission Wizard.</li>
+  <li>Articles submitted via the submission wizard will initially be in an "unedited"
+    state. Articles submitted via email will be posted in an "edited" state.</li>
+  <li>If your article is not yet edited then you can continue to modify your article
+    via the Modify button on the article itself, or by sending us your changes
+    via email at submit@rubywednesday.com - you choose.</li>
+  <li>If you post using the submission wizard then your article will go into a
+    moderation queue where high level members can review and approve your article.
+    During moderation you can edit your article as often as necessary, and very
+    soon (within a few hours) it will be approved for general viewing, unless
+    there are issues with the article that need addressing.</li>
+  <li>An editor may then formally edit your article which involves reviewing your
+    downloads, images, text and formatting and polishing the entire article. Once
+    this is done you may continue to send us updates to your article as often
+    as you like to submit@rubywednesday.com, but direct editing is no longer possible
+    since it may undo the editing work already done. Just let us know if you do
+    not wish for your article to get this final polish.</li>
+</ol>
+<h4>Tips</h4>
+<p>If you post to Ruby Wednesday then your code is offered under the terms of our Terms of Use and under the specific license agreement attached to the article. You also agree to the Contributors Agreement, which ensures you have the right to post the content, allows us to actually publish your content, and provides further protection for you on top of the License you choose for your content.</p>
+<p>Note that we do not accept time limited, shareware contributions or binary-only article contributions. All code that is available in our articles must be available for use without registration or license fees and without time restrictions, and all applications or binaries submitted must contain source code. Ruby Wednesday articles are for sharing source code, not applications or components. We are a source code sharing site and are very strict on ensuring that all articles on the site can be used without a typical developer needing to purchase anything.</p>
+<p>An article is acceptable if it can be used on its own using the tools, libraries and components that a developer working in the given technology could reasonably be expected to own, or which is free (as in no charge).</p>
+<p>Also note that source code associated with an article that was written by the author must be provided with the article. External links to the most up-to-date version (or online demo) are fine, but we still require at least a workable version to be submitted with your article to be made available on RubyWednesday. The reason for this is that 9 times out of 10 links to external downloads break within months due to any number of unavoidable factors. Having a local copy on RubyWednesday means at least some code will still be available.</p>
+<h4>Preparing your code</h4>
+<p>If you have some great code, but do not make it easy for others to use it, then more often than not people will pass it by and not use it. We suggest:</p>
+<ul>
+  <li>Write a brief description of your code, including what it is, what it does, and how to use it in your projects (Download a template file here, and read template instructions here)</li>
+  <li>Explain any tricky problems that you solved while developing the code. It makes great reading and helps others solve similar problems.</li>
+  <li>Comment your code</li>
+  <li>Include a small screen shot</li>
+  <li>Prepare a small app to demonstrate the code (only if appropriate)</li>
+</ul>
+<h4>Submitting your code</h4>
+<p>When submitting your code and article please check you have the following:</p>
+<ul>
+  <li>Article explaining your code</li>
+  <li>Small screen shot (PNG/GIF/JPEG only, maximum width 600 pixels)</li>
+  <li>Zip file containing your source files (if appropriate)</li>
+  <li>Zip file containing your sample application (if appropriate)</li>
+  <li>Name and contact details</li>
+</ul>
+<p>Package all this up into a single zip file and send it to submit@rubywednesday.com.</p>
+<p>When emailing the article please state the title of the article in the subject line. Also if you think it neatly fits in one of the categories, please let us know.</p>
+<h4>Updating Your Code</h4>
+<p>If you posted your article using the Article Submission Wizard, and it's still in the 'Unedited Reader Contributions' section then you can edit the article yourself by clicking on the 'Modify this article' link at the top right of the article.</p>
+<p>If you sent the article in to us via email at submit@rubywednesday.com, or the article has been edited and moved out of the unedited section, then follow these instructions
+Updating the downloads or images</p>
+<p>This is easy: simply send an email to submit@rubywednesday.com with the name of the article and its URL in the email body, and attach the files to your message as a zip file (for downloads) or PNG/GIF/JPEG for images. Obviously the smaller the better!</p>
+<h4>Updating the article text</h4>
+<p>We reformat each article that is submitted, and try our best to ensure that all grammar and spelling mistakes have been corrected. It is far, far easier for us if you edit the HTML for your article that we have posted. Logon to Ruby Wednesday and at the top right of your article will be a link 'Get Article's HTML'. Click on this and then save the HTML for your article using the File | Save menu in your browser. Ignore the stuff at the top and bottom of your page - you will see "Article Starts" and "Article Ends" tags in the HTML that point to where the actual text for your article is. Strip out everything above and below these markers and edit the HTML directly.</p>
+<p>If you only have a very small addition to make, or want to report spelling/grammar or link errors then you can just send these in as plain text.</p>
+<p>Send all updates to us and remember to <strong>include the name of the article and its URL in the email body</strong>.</p>
+
+<h4>Syntax colorization</h4>
+<p>You don't need to worry about colorizing your articles. We have a colorizer that takes care of this for you. If your article already contains colorization then don't worry - the colorizer cleans out all previous colorizing before recolorizing the entire article.</p>
+<p><strong>Advanced Colorizer Tip</strong>: To specify a language, add a 'lang' attribute in the &lt;code&gt; tag. eg:</p>
+
+<code lang="ruby">myVar = 0</code>
+
+<p>The currently supported languages are:</p>
+<ul>
+  <li>Plain Text (lang="text")</li>
+  <li>CSS (lang="css")</li>
+  <li>HTML (lang="html")</li>
+  <li>Javascript (lang="jscript")</li>
+  <li>Ruby (lang="Ruby")</li>
+  <li>SQL (lang="SQL")</li>
+  <li>XML (lang="xml")</li>
+</ul>
+<p>Other languages can be added on request.</p>
+
+<h4>The Article</h4>
+<p>First and foremost, we need some documentation. This doesn't have to be anything fancy, though we don't mind if it is, but if you think about answering the following questions then you should be off to a good start.</p>
+<ul>
+  <li>What does the code do?</li>
+  <li>How do I integrate it with my existing code or how do I use it?</li>
+  <li>If there is a similar article on Ruby Wednesday already, then how does this one differ? Why would someone want to use your version?</li>
+  <li>Is there some aspect of the code that is of particular interest that perhaps should be covered in the article?</li>
+  <li>Are there any particular environments the code is restricted to? (Windows, Linux or OS X, Rails 3, etc)</li>
+</ul>
+<p>The idea is to give the reader a clear idea of the purpose of your code, instead of forcing them to download a project, build it and then hunt around to find out what the sample does. This means articles that are code snippets, with no explanation of what the snippet does, are insufficient.</p>
+<p>The quickest way to get your code posted is to provide a simple HTML file. Our preferences on documentation are:</p>
+<ol>
+  <li>A simple HTML edited by a plain text editor or good HTML editor, using the template file provided,</li>
+  <li>A plain ol' text file,</li>
+  <li>Everything else.</li>
+</ol>
+<p>All the articles at Ruby Wednesday have the same look and feel which is achieved by only the most basic HTML features. If you send us a HTML file with different fonts and colors and fancy bits, chances are it will all be stripped out to make it conform to the Ruby Wednesday standard. All documentation is edited by hand, so it can be a real nightmare wading through masses of convoluted HTML.</p>
+<h4>License</h4>
+<p>When uploading an article you need to be aware of the risks and legal issues involved. We live in a litigious world so you need to protect yourself against those seeking damages against you for problems that may (or may not) have been caused by your article. Just saying "The code is free for use" is no longer enough. What does "free" mean? Are there any restrictions? What happens if your code breaks my system and costs me money?</p>
+<p>The following is a rough guide to the current licenses supported on Ruby Wednesday: Licenses.</p>
+<h4>The Zip file</h4>
+<p>Please ensure that you zip all files up using maximum compression, and remove all unnecessary files from the project folders. If possible, please keep submissions below 300Kb.</p>
+<p>File naming convention: If your contribution comprises a HTML article, source code and an image, then to make life easy for us we ask that you follow the following filename conventions. Suppose your article is called cool_code.html. The filenames should be of the form:</p>
+<p>cool_code.html 	The HTML documentation for your article<br />
+  cool_code.zip 	The zipped source code for your article<br />
+  cool_code.png 	An image to accompany your article</p>
+<p>Alternatively, if you have source code, a demo project and a number of images, then your filenames would be along the lines of:</p>
+<p>cool_code.html 	The HTML documentation for your article<br />
+  cool_code_src.zip 	The zipped source code for your article<br />
+  cool_code_demo.zip 	The zipped demo project for your article<br />
+  cool_code1.png 	An image to accompany your article<br />
+  cool_code2.png 	A second image to accompany your article</p>
+<p>BTW, don't use the name cool_code, try to find something more relevant :-)</p>
+<h4>Source code Guidelines</h4>
+<p>First and foremost, does the code actually work? We do sometimes get code that, for one reason or another, just does not work. Please check that the source code you send runs cleanly, and if part of a larger demo application, that the application itself runs OK.</p>
+<p>We do ask that the general conventions be adhered for your language to so that other programmers can understand your code easily. Conventions that help other programmers read your code are:</p>
+<ul>
+  <li></li>
+</ul>
+<h4>Sample Project</h4>
+<p>Sample Project: It is recommended that you also include a sample project. When creating a zip file for the sample project, please do not include the log directory. They simply inflate the size of the ZIP file.</p>
+<h4>Submitting an article based on another person's work</h4>
+<p>It is OK to use others' code as a base as long as you make it totally clear that some/most of the code isn't yours. If you use someone else's code then DO NOT remove their copyright notices. There is a lot of code reuse here, that's the point after all. As far as the articles that are being posted here we expect to see credit where credit's due, in the code and the HTML as appropriate.</p>
+<p>If you are submitting a modification, extension or correction to another person's work then we ask that you attempt to contact the original author first and then try to liaise with him/her to produce an update to the original article. This way we can retain continuity with the original article as well as reducing the number of completely new pages that need posting.</p>
+<h4>Submitting code already posted at another site</h4>
+<p>You are more than welcome to submit code that is already published at another site, provided you own the copyright on that article, and provided you have not given the other site exclusive rights to your article.</p>
+<h4>Ruby Wednesday Submission Template</h4>
+<p>The template zip file contains a HTML template for use when submitting articles to Ruby Wednesday. We recommend editing this file using Netbeans, Textmate or your favorite text editor. Note that all extraneous formatting (crazy colors, absolute positioning etc) will be removed in order to maintain a uniform appearance and help our readers.</p>
+<p>Using these templates will help us post your article sooner.</p>
+<p>To fill in the template just follow the 3 easy steps below:</p>
+<ol>
+  <li>Fill in the article description details</li>
+  <li>Add links to your images and downloads</li>
+  <li>Include the main article text</li>
+</ol>
+<p>That's all there is to it! All formatting will be done by the Ruby interpreter.</p>
+<h4>Foreign language submissions</h4>
+<p>Ruby Wednesday is an English-language site. While we welcome those from all cultures and all walks of life, we do ask that only English language articles be posted.</p>
+<h4>Technical Blog Submissions</h4>
+<p>Blog entries serve the same purpose as articles: to help developers with coding related issues. A good general guide to follow when deciding whether to submit your Blog feed and tag your blog entries is: is there a section that relates to your blog topic?</p>
+<h5>Things that are a Must</h5>
+<ol>
+  <li>Have some kind of technical basis (no entries on restaurants, great beers, or day to day affairs)</li>
+  <li>Present a problem and a solution</li>
+  <li>Write a brief description of your code, including what it is, what it does, and how it was used in your projects</li>
+  <li>Be at least 1000 characters long</li>
+  <li>Be more than a quick tip, or small entry more fit for an FAQ</li>
+</ol>
+<h5>Other things to Note</h5>
+<ol>
+  <li>Downloadable source code is not required.</li>
+  <li>Code snippets are always welcome</li>
+  <li>Pictures are also always welcome</li>
+  <li>Your Technical blog entries are licensed according to your default license set in your profile. Click 'My Settings' and then 'Articles' to change this default</li>
+</ol>

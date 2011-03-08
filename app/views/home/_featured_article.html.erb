@@ -1,0 +1,7 @@
+<% if featured_article.nil? %>
+  No Articles Found
+<% else %>
+  <%= link_to featured_article.title, @featured_article %>
+  <div class="featured_article_author">By <%= featured_article.user.first_name %> <%= featured_article.user.last_name %></div>
+  <div class="featured_article_excerpt"><%= featured_article.description %></div>
+<% end %>

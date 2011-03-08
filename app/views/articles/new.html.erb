@@ -1,0 +1,9 @@
+<% title 'Submission Wizard' %>
+
+<% form_for @article do |f| %>
+  <%= f.error_messages %>
+  <%= render "submission_step_#{@article.current_step}", :f => f %>
+  <p><%= f.submit "Back", :name => "back_button" unless @article.first_step? %>&nbsp;<%= f.submit "Continue" %></p>
+<% end %>
+
+<p><%= link_to "Back to List", articles_path %>

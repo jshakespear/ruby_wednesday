@@ -1,0 +1,20 @@
+<table>
+  <tr>
+  </tr>
+<% @articles.each do |article| %>
+	<tr>
+  	<td>
+  	  <%= link_to article.title, article %><br/>
+  	  <%= article.description %>
+  	</td>
+  	<td>
+  	  <%= article.updated_at %><br/>
+  	  <%#= article.category.name %>
+  	</td>
+	</tr>  
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Submit New Article', new_article_path %>

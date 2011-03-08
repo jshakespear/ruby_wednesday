@@ -1,0 +1,22 @@
+<% title 'Search Questions and Answers' %>
+<h3>Search Questions and Answers</h3>
+<% form_for @question do |f| %>
+  <table>
+    <tr>
+      <td>Keywords</td>
+      <td>
+        <%= text_field_tag :keywords %>
+        <%= submit_to_remote 'questions_search', 'Search', :url => { :action => 'search' }, :update => 'search_results' %>
+      </td>
+    </tr>
+    <tr>
+      <td>Tags</td>
+      <td><%= text_field_tag :tags %></td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+    </tr>
+  </table>
+<% end %>
+<div id="search_results">
+</div>

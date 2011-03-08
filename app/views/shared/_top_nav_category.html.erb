@@ -1,0 +1,8 @@
+<li>
+  <%= link_to top_nav_category.name, category_articles_path(top_nav_category) %>
+  <ul>
+    <% for sub_category in get_sub_categories_by_parent_id(top_nav_category.id) %>
+			<%= render :partial => "shared/top_nav_sub_category", :locals => { :sub_category => sub_category } %>
+		<% end %>
+  </ul>
+</li>

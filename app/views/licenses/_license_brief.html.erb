@@ -1,0 +1,8 @@
+<div class="license_brief">
+<% if license_brief.id == 1 %>
+  <h4><%= link_to license_brief.name, license_brief %></h4>
+<% else %>
+  <h4><%= link_to license_brief.name, license_brief.url %></h4>
+<% end %>
+  <%= license_brief.brief_description %>
+</div>

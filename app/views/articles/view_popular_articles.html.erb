@@ -1,0 +1,8 @@
+<h3>Most Popular Articles</h3>
+<% if @articles %>
+  <% @articles.each do |article| %>
+		<%= link_to article.title, article %>
+<% end %>
+<% else %>
+	No articles found
+<% end%>

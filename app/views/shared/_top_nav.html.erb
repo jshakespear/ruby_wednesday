@@ -1,0 +1,10 @@
+<div class="navbar clearfix">
+	<ul id="nav">
+		<li><%= link_to "Home", "/" %>
+		<li><%= link_to "Articles", "/articles" %>
+		<li><%= link_to "Questions &amp; Answers", "/qanda" %>
+		<li><%= link_to "Learning Zones", "/learning_zones" %>
+	</ul>
+	<%= text_field_tag 'search' %>
+</div>
+<%= render :partial => "shared/sign_in_out" %>

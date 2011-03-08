@@ -1,0 +1,15 @@
+<h3>Submission Wizard :: Step 2</h3>
+
+<table>
+  <tr>
+    <td><%= f.label :content %>:</td>
+    <td><%= f.text_area :content, :cols => 104, :rows => 50 %></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <%#= submit_to_remote 'article_submit', 'Save', :url => { :action => 'submission_wizard_finalize' } %>
+      <%#= f.submit 'Continue' %>
+    </td>
+  </tr>
+</table>
